@@ -14,20 +14,25 @@ body {
   background-color: #161414;
 
   text-align: center;
-  max-height: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text h3,
 h1 {
   color: rgb(241, 50, 40);
   font-weight: 300;
+  display: block;
+  margin: 0 auto;
 }
 
 .container img {
   display: block;
 
   width: 100%;
-  position: relative;
 }
 
 .container {
