@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  background-color: #161414;
+
+  text-align: center;
+  min-height: 100vh;
+}
+
+.text h3,
+h1 {
+  color: rgb(241, 50, 40);
+  font-weight: 300;
+  display: block;
+  margin: 0 auto;
+}
+
+.container img {
+  display: block;
+
+  width: 100%;
+}
+
+.container {
+  width: 200px;
+  margin: auto;
+
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+
+  transform: translate(-10%);
+
+  opacity: 0;
+
+  transition: 0.5s ease-in-out;
+
+  z-index: 1;
+}
+
+.container:hover .text {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(85, 81, 81, 0.3);
+  opacity: 0;
+}
+
+.container:hover::after {
+  opacity: 1;
+  transition: 1s;
+}
+
+/* displayed inline-block for btn anchor tags because these are by default inline and you cannot give height or width to inline elements */
+.btn {
+  display: inline-block;
+
+  text-decoration: none;
+  background-color: #232323;
+
+  padding: 0em 0.4em;
+
+  color: rgb(0, 0, 0);
+  background: rgb(194, 193, 193);
+}
+
+.text a:hover {
+  color: rgb(241, 50, 40);
+}
